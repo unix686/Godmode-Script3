@@ -1,5 +1,15 @@
-var playerHealth = 100;
+local LocalPlayer = game:GetService("Players").LocalPlayer
 
-playerHealth = 99999999;
+local function Invincibility()
+    if LocalPlayer.Character then
+        for i, v in pairs(LocalPlayer.Character:GetChildren()) do
+            if v.Name == "hitbox" then
+                v:Destroy()
+            end
+        end
+    end
+end
 
-console.log("Your health is now unlimited!");
+while wait(0.5) do
+    Invincibility(LocalPlayer)
+end
