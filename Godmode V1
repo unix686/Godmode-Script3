@@ -1,0 +1,5 @@
+var playerHealth = 100;
+
+playerHealth = 99999999;
+
+console.log("Your health is now unlimited!");
